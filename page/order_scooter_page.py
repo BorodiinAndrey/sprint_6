@@ -4,7 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class OrderScooterPage:
 
-    def __init__(self, driver, timeout=10):
+    def __init__(self, driver, timeout=5):
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
@@ -23,6 +23,12 @@ class OrderScooterPage:
     def get_text(self, locator):
         element = self.wait.until(EC.visibility_of_element_located(locator))
         return element.text
+
+    def switch_to_second_tab(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
+
+    def get_current_link(self):
+        return self.driver.current_url
 
     def get_order_scooter(self, locators_class, name, last_name, address, phone, data):
         self.click_to_element(locators_class.ORDER_BUTTON)

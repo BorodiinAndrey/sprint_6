@@ -15,3 +15,4 @@ class SecondDataSet:
 class Text:
     order_text = 'Заказ оформлен'
     main_page_text = 'Самокат\nна пару дней\nПривезём его прямо к вашей двери,\nа когда накатаетесь — заберём'
+    yandex_link = 'https://dzen.ru/?yredirect=true'
