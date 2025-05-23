@@ -20,6 +20,10 @@ class OrderScooterPage:
         element = self.wait.until(EC.visibility_of_element_located(locator))
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
 
+    def get_text(self, locator):
+        element = self.wait.until(EC.visibility_of_element_located(locator))
+        return element.text
+
     def get_order_scooter(self, locators_class, name, last_name, address, phone, data):
         self.click_to_element(locators_class.ORDER_BUTTON)
         self.input_text(locators_class.NAME_LOCATOR, name)
@@ -33,3 +37,5 @@ class OrderScooterPage:
         self.click_to_element(locators_class.CLICK_LOCATOR)
         self.click_to_element(locators_class.RENTAL_PERIOD_LOCATOR)
         self.click_to_element(locators_class.TIME_LOCATOR)
+        self.click_to_element(locators_class.FINAL_ORDER_BUTTON_LOCATOR)
+        self.click_to_element(locators_class.YES_BUTTON_LOCATOR)

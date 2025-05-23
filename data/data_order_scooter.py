@@ -11,3 +11,7 @@ class SecondDataSet:
     address = 'Москва'
     phone = '+79299359599'
     data = '23.05.2025'
+
+class Text:
+    order_text = 'Заказ оформлен'
+    main_page_text = 'Самокат\nна пару дней\nПривезём его прямо к вашей двери,\nа когда накатаетесь — заберём'
