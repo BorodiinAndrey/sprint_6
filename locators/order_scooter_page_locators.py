@@ -9,6 +9,10 @@ class HeaderOrderButton:
     CHOOSE_STATION_LOCATOR = [By.XPATH, "//*[@class='select-search__row' and @data-index='0']"]
     PHONE_LOCATOR = [By.XPATH, '//*[@placeholder="* Телефон: на него позвонит курьер"]']
     NEXT_BUTTON = [By.XPATH, "//*[contains(@class, 'Button_Button__ra12g') and contains(@class, 'Button_Middle__1CSJM') and text()='Далее']"]
+    DATA_LOCATOR = [By.XPATH, '//*[@placeholder="* Когда привезти самокат"]']
+    CLICK_LOCATOR = [By.CLASS_NAME, 'Order_Header__BZXOb']
+    RENTAL_PERIOD_LOCATOR = [By.CLASS_NAME, 'Dropdown-placeholder']
+    TIME_LOCATOR = [By.XPATH, "//*[@class='Dropdown-option' and @aria-selected='false' and normalize-space(text())='сутки']"]
 
 class CenterOrderButton:
     ORDER_BUTTON = [By.XPATH, "//div[contains(@class, 'Home_FinishButton__1_cWm')]//*[contains(@class, 'Button_Button__ra12g') and contains(@class, 'Button_Middle__1CSJM')]"]
@@ -19,3 +23,7 @@ class CenterOrderButton:
     CHOOSE_STATION_LOCATOR = [By.XPATH, "//*[@class='select-search__row' and @data-index='1']"]
     PHONE_LOCATOR = [By.XPATH, '//*[@placeholder="* Телефон: на него позвонит курьер"]']
     NEXT_BUTTON = [By.XPATH, "//*[contains(@class, 'Button_Button__ra12g') and contains(@class, 'Button_Middle__1CSJM') and text()='Далее']"]
+    DATA_LOCATOR = [By.XPATH, '//*[@placeholder="* Когда привезти самокат"]']
+    CLICK_LOCATOR = [By.CLASS_NAME, 'Order_Header__BZXOb']
+    RENTAL_PERIOD_LOCATOR = [By.CLASS_NAME, 'Dropdown-placeholder']
+    TIME_LOCATOR = [By.XPATH, "//*[@class='Dropdown-option' and @aria-selected='false' and normalize-space(text())='двое суток']"]
