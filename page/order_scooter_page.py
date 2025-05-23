@@ -9,9 +9,10 @@ class OrderScooterPage:
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
-    def wait_element(self, locator):
-        return self.wait.until(EC.visibility_of_element_located(locator))
+    def click_to_element(self, locator):
+        element = self.wait.until(EC.element_to_be_clickable(locator))
+        element.click()
 
-    def scroll_to_element(self, locator):
-        element = self.wait_element(locator)
-        ActionChains(self.driver).move_to_element(element).perform()
+    def input_text(self, locator, text):
+        element = self.wait.until(EC.visibility_of_element_located(locator))
+        element.send_keys()
