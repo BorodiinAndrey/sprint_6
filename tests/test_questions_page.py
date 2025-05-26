@@ -18,7 +18,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(FirstImportantQuestion.HOW_MUCH_QUESTION)
 
         with allure.step('Сравнение текста первого вопроса'):
-            assert data_questions.how_much_question_text == pages.questions.get_text(FirstImportantQuestion.HOW_MUCH_TEXT)
+            assert data_questions.HOW_MUCH_QUESTION_TEXT == pages.questions.get_text(FirstImportantQuestion.HOW_MUCH_TEXT)
 
     @allure.title('Проверка вопроса "Хочу сразу несколько самокатов! Так можно?"')
     def test_want_couple_scooter_question(self, pages):
@@ -30,7 +30,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(SecondImportantQuestion.WANT_COUPLE_SCOOTER_QUESTION)
 
         with allure.step('Сравнение текста второго вопроса'):
-            assert data_questions.want_couple_scooter_text == pages.questions.get_text(SecondImportantQuestion.WANT_COUPLE_SCOOTER_TEXT)
+            assert data_questions.WANT_COUPLE_SCOOTER_TEXT == pages.questions.get_text(SecondImportantQuestion.WANT_COUPLE_SCOOTER_TEXT)
 
     @allure.title('Проверка вопроса "Как рассчитывается время аренды?"')
     def test_rental_time_calculated_question(self, pages):
@@ -42,7 +42,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(ThirdImportantQuestion.RENTAL_TIME_CALCULATED_QUESTION)
 
         with allure.step('Сравнение текста третьего вопроса'):
-            assert data_questions.rental_time_calculated_text == pages.questions.get_text(ThirdImportantQuestion.RENTAL_TIME_CALCULATED_TEXT)
+            assert data_questions.RENTAL_TIME_CALCULATED_TEXT == pages.questions.get_text(ThirdImportantQuestion.RENTAL_TIME_CALCULATED_TEXT)
 
     @allure.title('Проверка вопроса "Можно ли заказать самокат прямо на сегодня?"')
     def test_order_scooter_today_question(self, pages):
@@ -54,7 +54,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(FourthImportantQuestion.ORDER_SCOOTER_TODAY_QUESTION)
 
         with allure.step('Сравнение текста четвертого вопроса'):
-            assert data_questions.order_scooter_today_text == pages.questions.get_text(FourthImportantQuestion.ORDER_SCOOTER_TODAY_TEXT)
+            assert data_questions.ORDER_SCOOTER_TODAY_TEXT == pages.questions.get_text(FourthImportantQuestion.ORDER_SCOOTER_TODAY_TEXT)
 
     @allure.title('Проверка вопроса "Можно ли продлить заказ или вернуть самокат раньше?"')
     def test_extend_order_question(self, pages):
@@ -66,7 +66,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(FifthImportantQuestion.EXTEND_ORDER_QUESTION)
 
         with allure.step('Сравнение текста пятого вопроса'):
-            assert data_questions.extend_order_text == pages.questions.get_text(FifthImportantQuestion.EXTEND_ORDER_TEXT)
+            assert data_questions.EXTEND_ORDER_TEXT == pages.questions.get_text(FifthImportantQuestion.EXTEND_ORDER_TEXT)
 
     @allure.title('Проверка вопроса "Вы привозите зарядку вместе с самокатом?"')
     def test_bring_charger_question(self, pages):
@@ -78,7 +78,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(SixthImportantQuestion.BRING_CHARGER_QUESTION)
 
         with allure.step('Сравнение текста шестого вопроса'):
-            assert data_questions.bring_charger_text == pages.questions.get_text(SixthImportantQuestion.BRING_CHARGER_TEXT)
+            assert data_questions.BRING_CHARGER_TEXT == pages.questions.get_text(SixthImportantQuestion.BRING_CHARGER_TEXT)
 
     @allure.title('Проверка вопроса "Можно ли отменить заказ?"')
     def test_cancel_order_question(self, pages):
@@ -90,7 +90,7 @@ class TestQuestionsPage:
             pages.questions.click_to_element(SeventhImportantQuestion.CANCEL_ORDER_QUESTION)
 
         with allure.step('Сравнение текста седьмого вопроса'):
-            assert data_questions.cancel_order_text == pages.questions.get_text(SeventhImportantQuestion.CANCEL_ORDER_TEXT)
+            assert data_questions.CANCEL_ORDER_TEXT == pages.questions.get_text(SeventhImportantQuestion.CANCEL_ORDER_TEXT)
 
     @allure.title('Проверка вопроса "Я жизу за МКАДом, привезёте?"')
     def test_mkad_question(self, pages):
@@ -102,4 +102,4 @@ class TestQuestionsPage:
             pages.questions.click_to_element(EighthImportantQuestion.MKAD_QUESTION)
 
         with allure.step('Сравнение текста восьмого вопроса'):
-            assert data_questions.mkad_text == pages.questions.get_text(EighthImportantQuestion.MKAD_TEXT)
+            assert data_questions.MKAD_TEXT == pages.questions.get_text(EighthImportantQuestion.MKAD_TEXT)
