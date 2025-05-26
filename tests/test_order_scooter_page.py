@@ -3,6 +3,7 @@ from typing import Type
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 from data.data_order_scooter import FirstDataSet, SecondDataSet, Text
+from data.urls import YANDEX_LINK
 from locators.order_scooter_page_locators import HeaderOrderButton, CenterOrderButton, BaseOrderLocators
 
 
@@ -51,5 +52,5 @@ class TestOrderScooterPage:
             pages.order_scooter.switch_to_second_tab()
 
         with allure.step("Проверка, что произошел редирект на страницу Яндекс"):
-            pages.order_scooter.wait.until(EC.url_contains(Text.YANDEX_LINK))
-            assert Text.YANDEX_LINK in pages.order_scooter.get_current_link()
+            pages.order_scooter.wait.until(EC.url_contains(YANDEX_LINK))
+            assert YANDEX_LINK in pages.order_scooter.get_current_link()
